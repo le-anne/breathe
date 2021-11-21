@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #CEA5F1;
+    --secondary-color: #A8A5F1;
+    --large: 300px;
+    --small: 15px;
+    --timing: 8s;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+}
+
+main, section {
+    height: 300px;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: auto;
+  
+}
+
+div{
+    background-color: var(--primary-color);
+    width: var(--small);
+    height: var(--small);
+    border-radius: calc( var(--small) / 2);
+    display: inline-block;
+    animation: breath var(--timing) ease infinite none running
+}
+
+input {
+    margin: 10px 0;
+    height: 30px;
+  width: 200px;
+    font-size: 1.25em;
+  border-radius: 25px;
+  margin: 0 auto;
+  color: #CEA5F1;
+  opacity: 0.70;
+}
+
+h1,p,input {
+    color: #62748c;
+    font-family:'Prompt', sans-serif;
+    text-align: center;
+}
+
+label {
+    color: #CEA5F1;
+  opacity: 0.5;
+    font-family:'Prompt', sans-serif;
+    text-align: center;
+}
+
+@keyframes breath {
+ 25%, 50% {
+    background-color: var(--secondary-color);
+    width: var(--large);
+    height: var(--large);
+    border-radius: calc( var(--large) / 2);
+ }   
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
